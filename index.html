@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learnify | Online Learning Platform</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#faf9ff;color:#262344;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+header{background:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;box-shadow:0 2px 12px #0000000b;position:sticky;top:0;z-index:10}
+.logo{font-size:28px;font-weight:bold;color:#6c4cf1}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{font-size:14px;font-weight:600}
+nav a:hover,.active-link{color:#6c4cf1}
+.btn{display:inline-block;background:#6c4cf1;color:white;padding:11px 20px;border:0;border-radius:9px;cursor:pointer;font-weight:bold}
+.btn:hover{background:#5032ce}
+.hero{padding:65px 7%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;background:linear-gradient(120deg,#f0eaff,#fff1e6)}
+.hero h1{font-size:clamp(35px,5vw,55px);line-height:1.2;margin:15px 0}
+.hero h1 span{color:#6c4cf1}
+p{color:#77758b;margin:12px 0 20px}
+.hero img{width:100%;height:350px;object-fit:cover;border-radius:22px}
+.tag{color:#6c4cf1;font-size:12px;font-weight:bold;letter-spacing:1px}
+.section{padding:60px 7%}
+.heading{text-align:center;margin-bottom:32px}
+.heading h2{font-size:32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:white;border:1px solid #ece8f6;border-radius:15px;overflow:hidden;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px #30206015}
+.card img{width:100%;height:185px;object-fit:cover}
+.card-body{padding:20px}
+.card h3{margin:9px 0}
+.card p{font-size:14px}
+.category{display:inline-block;background:#eee8ff;color:#6c4cf1;padding:4px 9px;border-radius:6px;font-size:12px}
+.categories .card{text-align:center;padding:25px}
+.emoji{font-size:40px}
+.light{background:white}
+.cta{margin:25px 7% 55px;padding:35px;background:linear-gradient(120deg,#6c4cf1,#a05af3);border-radius:18px;display:flex;justify-content:space-between;align-items:center;gap:20px;color:white}
+.cta p{color:#eee}
+footer{background:#211b3a;color:white;text-align:center;padding:30px 15px}
+footer p{color:#d1c9e4;font-size:13px}
+.footerlinks{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:15px}
+.page{display:none;min-height:65vh}
+.page.active{display:block}
+.banner{text-align:center;padding:45px 15px;background:linear-gradient(120deg,#f0eaff,#fff1e6)}
+.banner h1{font-size:36px}
+.formbox{background:white;max-width:540px;margin:35px auto;padding:30px;border-radius:16px;box-shadow:0 8px 30px #30206012}
+.formbox h2{margin-bottom:8px}
+.field{margin:15px 0}
+.field label{display:block;font-weight:bold;font-size:14px;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;padding:12px;border:1px solid #ddd;border-radius:8px}
+.field textarea{height:110px}
+.formbox button{width:100%}
+.notice{text-align:center;font-size:12px;color:#888;margin-top:15px}
+.search{display:flex;gap:10px;max-width:600px;margin:0 auto 30px}
+.search input{flex:1;min-width:0;padding:12px;border:1px solid #ddd;border-radius:8px}
+.about{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.about img{width:100%;height:300px;object-fit:cover;border-radius:15px}
+@media(max-width:800px){header{justify-content:center}nav{justify-content:center}.hero,.about{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.hero img{height:270px}.cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.section{padding:40px 5%}nav{gap:12px}nav a{font-size:12px}.search{flex-direction:column}.hero{padding:40px 5%}.formbox{margin:20px 5%;padding:22px}}
+</style>
+</head>
+<body>
+
+<header>
+<a href="#home" class="logo">Learnify.</a>
+<nav>
+<a href="#home">Home</a>
+<a href="#courses">Courses</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#login">Login</a>
+</nav>
+<a href="#signup" class="btn">Join Free</a>
+</header>
+
+<main>
+<!-- HOME -->
+<div class="page active" id="home">
+<section class="hero">
+<div>
+<span class="tag">✨ LEARN SOMETHING NEW EVERY DAY</span>
+<h1>Unlock Your Potential With <span>Online Learning</span></h1>
+<p>Explore exciting courses, learn new skills and build a brighter future with Learnify.</p>
+<a href="#courses" class="btn">Explore Courses →</a>
+<p>📚 50+ Courses &nbsp; 🎓 Expert Learning &nbsp; 💻 Learn Online</p>
+</div>
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Students learning together">
+</section>
+
+<section class="section categories">
+<div class="heading"><span class="tag">LEARN YOUR WAY</span><h2>Explore Categories</h2><p>Choose a subject you love.</p></div>
+<div class="grid">
+<a href="#courses" class="card"><div class="emoji">💻</div><h3>Web Development</h3><p>Learn to build websites.</p></a>
+<a href="#courses" class="card"><div class="emoji">🐍</div><h3>Programming</h3><p>Start your coding journey.</p></a>
+<a href="#courses" class="card"><div class="emoji">📊</div><h3>Data Science</h3><p>Discover the world of data.</p></a>
+</div>
+</section>
+
+<section class="section light">
+<div class="heading"><span class="tag">POPULAR COURSES</span><h2>Learn In-Demand Skills</h2><p>Start learning today.</p></div>
+<div class="grid">
+<article class="card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Web development"><div class="card-body"><span class="category">Development</span><h3>Web Development</h3><p>Learn HTML, CSS and JavaScript.</p><button class="btn choose" data-course="Web Development">View Course</button></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80" alt="Python"><div class="card-body"><span class="category">Programming</span><h3>Python for Beginners</h3><p>Understand coding step by step.</p><button class="btn choose" data-course="Python for Beginners">View Course</button></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Data analytics"><div class="card-body"><span class="category">Data Science</span><h3>Data Analytics</h3><p>Learn charts and data insights.</p><button class="btn choose" data-course="Data Analytics">View Course</button></div></article>
+</div>
+</section>
+<section class="cta"><div><h2>Ready to Start Learning?</h2><p>Your future begins today!</p></div><a class="btn" style="background:white;color:#6c4cf1" href="#signup">Join Learnify →</a></section>
+</div>
+
+<!-- COURSES -->
+<div class="page" id="courses">
+<div class="banner"><span class="tag">DISCOVER YOUR POTENTIAL</span><h1>Our Courses 📚</h1><p>Find your next skill.</p></div>
+<section class="section">
+<div class="search"><input id="courseSearch" placeholder="Search Python, design, marketing..."><button class="btn" id="searchBtn">Search</button></div>
+<div class="grid" id="courseGrid">
+<article class="card" data-search="web development html css javascript"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Web development"><div class="card-body"><span class="category">Development</span><h3>Web Development</h3><p>Learn website development basics.</p><button class="btn choose" data-course="Web Development">View Course</button></div></article>
+<article class="card" data-search="python programming coding"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=700&q=80" alt="Python"><div class="card-body"><span class="category">Programming</span><h3>Python for Beginners</h3><p>Learn Python programming.</p><button class="btn choose" data-course="Python for Beginners">View Course</button></div></article>
+<article class="card" data-search="data science analytics excel"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Data analytics"><div class="card-body"><span class="category">Data Science</span><h3>Data Analytics</h3><p>Understand data and visualizations.</p><button class="btn choose" data-course="Data Analytics">View Course</button></div></article>
+<article class="card" data-search="graphic design art creativity"><img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=700&q=80" alt="Graphic design"><div class="card-body"><span class="category">Design</span><h3>Graphic Design</h3><p>Explore creative design skills.</p><button class="btn choose" data-course="Graphic Design">View Course</button></div></article>
+<article class="card" data-search="digital marketing seo social media"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Digital marketing"><div class="card-body"><span class="category">Marketing</span><h3>Digital Marketing</h3><p>Learn SEO and social media.</p><button class="btn choose" data-course="Digital Marketing">View Course</button></div></article>
+<article class="card" data-search="communication english career"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=80" alt="Communication skills"><div class="card-body"><span class="category">Personal Growth</span><h3>Communication Skills</h3><p>Improve professional communication.</p><button class="btn choose" data-course="Communication Skills">View Course</button></div></article>
+</div>
+<p class="notice" id="noResults" hidden>No matching courses found.</p>
+</section>
+</div>
+
+<!-- ABOUT -->
+<div class="page" id="about">
+<div class="banner"><span class="tag">GET TO KNOW US</span><h1>About Learnify 💜</h1><p>Making learning simple and enjoyable.</p></div>
+<section class="section">
+<div class="about">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80" alt="Students studying">
+<div><span class="tag">OUR STORY</span><h2>Education Opens New Doors</h2><p>Learnify is an online learning platform concept designed to help students discover courses and develop new skills.</p><p>Our goal is to make learning easy, engaging and accessible through a student-friendly website.</p><p>✨ Easy to use<br>📚 Multiple courses<br>💻 Digital learning<br>🎯 Skill development</p><a href="#courses" class="btn">Explore Courses</a></div>
+</div>
+<div class="grid" style="margin-top:35px">
+<div class="card card-body"><h3>🎯 Our Mission</h3><p>Make online learning easier for students.</p></div>
+<div class="card card-body"><h3>🌟 Our Vision</h3><p>Encourage creativity and lifelong learning.</p></div>
+<div class="card card-body"><h3>🤝 Our Values</h3><p>Support accessible education.</p></div>
+</div>
+</section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="contact">
+<div class="banner"><h1>Contact Us 💌</h1><p>We would love to hear from you.</p></div>
+<section class="section">
+<form class="formbox demo-form" data-message="Thank you! This is a frontend demo. Your message was not sent to a server.">
+<h2>Send a Message</h2><p>Fill in your details below.</p>
+<div class="field"><label for="cname">Full Name</label><input id="cname" required placeholder="Your name"></div>
+<div class="field"><label for="cemail">Email</label><input id="cemail" type="email" required placeholder="Your email"></div>
+<div class="field"><label for="subject">Subject</label><select id="subject" required><option value="">Select subject</option><option>Course Information</option><option>Support</option><option>Feedback</option></select></div>
+<div class="field"><label for="message">Message</label><textarea id="message" required placeholder="Write your message"></textarea></div>
+<button class="btn" type="submit">Send Message →</button>
+<p class="notice">Frontend demo only. No message is stored.</p>
+</form>
+</section>
+</div>
+
+<!-- LOGIN -->
+<div class="page" id="login">
+<div class="banner"><h1>Welcome Back 👋</h1><p>Continue your learning journey.</p></div>
+<section class="section">
+<form class="formbox demo-form" data-message="Demo login complete. Actual authentication is not connected.">
+<h2>Login to Learnify</h2>
+<div class="field"><label for="lemail">Email Address</label><input id="lemail" type="email" required placeholder="you@example.com"></div>
+<div class="field"><label for="lpassword">Password</label><input id="lpassword" type="password" minlength="6" required placeholder="Password"></div>
+<button class="btn" type="submit">Login →</button>
+<p class="notice">New user? <a href="#signup" style="color:#6c4cf1">Sign up here</a></p>
+</form>
+</section>
+</div>
+
+<!-- SIGNUP -->
+<div class="page" id="signup">
+<div class="banner"><h1>Join Learnify 🎉</h1><p>Create your demo account.</p></div>
+<section class="section">
+<form class="formbox demo-form" id="signupForm" data-message="Demo signup complete! No account has been saved.">
+<h2>Create Account</h2>
+<div class="field"><label for="sname">Full Name</label><input id="sname" required placeholder="Full name"></div>
+<div class="field"><label for="semail">Email Address</label><input id="semail" type="email" required placeholder="you@example.com"></div>
+<div class="field"><label for="spassword">Password</label><input id="spassword" type="password" minlength="6" required placeholder="At least 6 characters"></div>
+<div class="field"><label for="sconfirm">Confirm Password</label><input id="sconfirm" type="password" minlength="6" required placeholder="Enter password again"></div>
+<button class="btn" type="submit">Create Account →</button>
+<p class="notice">Already registered? <a href="#login" style="color:#6c4cf1">Login</a></p>
+</form>
+</section>
+</div>
+</main>
+
+<footer>
+<a href="#home" class="logo" style="color:white">Learnify.</a>
+<p>Learn today. Lead tomorrow.</p>
+<div class="footerlinks"><a href="#home">Home</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<p>© 2026 Learnify | Online Learning Platform</p>
+</footer>
+
+<script>
+// Navigate between pages
+function showPage(){
+let page=location.hash.slice(1)||"home";
+if(!document.getElementById(page))page="home";
+document.querySelectorAll(".page").forEach(el=>el.classList.toggle("active",el.id===page));
+document.querySelectorAll("nav a").forEach(el=>el.classList.toggle("active-link",el.getAttribute("href")==="#"+page));
+window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",showPage);
+showPage();
+
+// Search courses
+function searchCourses(){
+let q=document.getElementById("courseSearch").value.toLowerCase().trim(),count=0;
+document.querySelectorAll("#courseGrid .card").forEach(card=>{
+let match=(card.dataset.search+" "+card.textContent).toLowerCase().includes(q);
+card.hidden=!match;
+if(match)count++;
+});
+document.getElementById("noResults").hidden=count>0;
+}
+document.getElementById("searchBtn").addEventListener("click",searchCourses);
+document.getElementById("courseSearch").addEventListener("input",searchCourses);
+
+// Course selection demo
+document.querySelectorAll(".choose").forEach(btn=>{
+btn.addEventListener("click",()=>alert("Selected course: "+btn.dataset.course+"\n\nThis is a frontend demo."));
+});
+
+// Form demonstrations
+document.querySelectorAll(".demo-form").forEach(form=>{
+form.addEventListener("submit",event=>{
+event.preventDefault();
+if(!form.checkValidity()){form.reportValidity();return;}
+if(form.id==="signupForm"&&document.getElementById("spassword").value!==document.getElementById("sconfirm").value){
+alert("Passwords do not match!");
+return;
+}
+alert(form.dataset.message);
+form.reset();
+});
+});
+</script>
+</body>
+</html>
